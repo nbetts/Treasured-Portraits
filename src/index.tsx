@@ -16,6 +16,7 @@ import firebase from 'firebase/app';
 import { firebaseConfig } from './config/firebase';
 import { rootReducer } from './store/reducers/root';
 import { NavBar } from './components/NavBar';
+import { About } from './pages/About';
 
 const store = createStore(
   rootReducer,
@@ -43,6 +44,7 @@ ReactDOM.render(
               <NavBar />
               <Switch>
                 <Route exact path={Routes.HOME} component={Home} />
+                <Route path={Routes.ABOUT} component={About} />
                 <Route component={NotFound} />
               </Switch>
             </BrowserRouter>
