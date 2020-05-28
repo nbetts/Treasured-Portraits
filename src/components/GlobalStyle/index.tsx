@@ -37,4 +37,9 @@ export default createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
   }
+
+  a {
+    color: initial;
+    text-decoration: initial;
+  }
 `;

@@ -15,6 +15,7 @@ import { reduxFirestore, getFirestore, createFirestoreInstance } from 'redux-fir
 import firebase from 'firebase/app';
 import { firebaseConfig } from './config/firebase';
 import { rootReducer } from './store/reducers/root';
+import { NavBar } from './components/NavBar';
 
 const store = createStore(
   rootReducer,
@@ -39,6 +40,7 @@ ReactDOM.render(
         <ReactReduxFirebaseProvider {...reactReduxFirebaseProps}>
           <ThemeProvider theme={theme}>
             <BrowserRouter>
+              <NavBar />
               <Switch>
                 <Route exact path={Routes.HOME} component={Home} />
                 <Route component={NotFound} />
